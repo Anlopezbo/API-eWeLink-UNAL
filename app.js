@@ -12,8 +12,9 @@ const sheet = new GoogleSheetsApi(credentials, '1mGeTVjI-gfXdgii3tJL7Yj2EQ7vhW6v
         devices.name,
         devices.params.power,
         devices.params.voltage,
-        devices.params.current
+        devices.params.current,
+        devices.onlineTime
     ];
-
+    
     await sheet.appendValues(values);
 })();
